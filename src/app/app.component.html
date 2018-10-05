@@ -1,0 +1,12 @@
+<h1>
+  TODOs
+</h1>
+
+<p>Insert new item</p>
+<input type="text" [(ngModel)]="todoItem" name="todoItem"> <button type="button" (click)="save()">Add</button>
+
+<ul>
+  <li *ngFor="let todo of todos">
+    {{todo.name}} <button type="button" (click)="delete(todo.id)">x</button>
+  </li>
+</ul>
