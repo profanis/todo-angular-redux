@@ -1,19 +1,23 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
-import { AppComponent } from './app.component';
-
+import { AppComponent } from "./app.component";
+import { StoreModule } from "@ngrx/store";
+import { TodoModule } from "./todo/todo.module";
+import { TodosEffects } from "../store/effects";
+import { EffectsModule } from "@ngrx/effects";
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    TodoModule,
+    StoreModule.forRoot({}),
+    EffectsModule.forRoot([])
   ],
-  providers: [],
+  providers: [TodosEffects],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
