@@ -1,7 +1,6 @@
-import * as fromStore from "../../../store";
 import { Component, OnInit } from "@angular/core";
+
 import { Todo } from "../todo.model";
-import { Store } from "@ngrx/store";
 
 @Component({
   selector: "app-todo",
@@ -12,23 +11,11 @@ export class TodoComponent implements OnInit {
   todoItem: string;
   todos: Todo[];
 
-  constructor(private store: Store<fromStore.ProductState>) {}
+  constructor() {}
 
-  ngOnInit(): void {
-    this.store.select(fromStore.getAllTodos).subscribe(state => {
-      this.todos = state;
-    });
+  ngOnInit(): void {}
 
-    this.store.dispatch(new fromStore.LoadTodos());
-  }
+  save(): void {}
 
-  save(): void {
-    this.store.dispatch(
-      new fromStore.AddTodo({ id: Math.random(), name: this.todoItem })
-    );
-  }
-
-  delete(id: number) {
-    this.store.dispatch(new fromStore.RemoveTodo(id));
-  }
+  delete(id: number) {}
 }
