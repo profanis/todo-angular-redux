@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { Actions, Effect } from "@ngrx/effects";
+import { Actions, Effect, ofType } from "@ngrx/effects";
 import { map, switchMap } from "rxjs/operators";
 
 import * as todoActions from "../actions";
@@ -10,11 +10,12 @@ export class TodosEffects {
   constructor(private actions$: Actions, private todoService: TodoService) {}
 
   @Effect()
-  loadTodos$ = this.actions$.ofType(todoActions.LOAD_TODOS).pipe(
+  loadTodos$ = this.actions$.pipe(
+    ofType(todoActions.LOAD_TODOS),
     switchMap(() => {
       return this.todoService
         .getTodos$()
         .pipe(map(todos => new todoActions.LoadTodosSuccess(todos)));
-    })
+    }),
   );
 }
