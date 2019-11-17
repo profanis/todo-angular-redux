@@ -854,20 +854,20 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@ngrx/effects@4.1.0":
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/@ngrx/effects/-/effects-4.1.0.tgz#a67f5abb71bdb2fea1fa9b751a4f38435674a6a8"
-  integrity sha1-pn9au3G9sv6h+pt1Gk84Q1Z0pqg=
+"@ngrx/effects@^8.5.1":
+  version "8.5.1"
+  resolved "https://registry.yarnpkg.com/@ngrx/effects/-/effects-8.5.1.tgz#d8ffca66d77db678f6fcdd6a11bc38a433c7bede"
+  integrity sha512-xb5GfXCN13wEUhe5YUN5t9GeP+DzCJYKwtB2pMR94gqMOU2eQdE3qmglRZIMLjsENSAtnFO7i11FPrwG31Jkyw==
 
-"@ngrx/store-devtools@4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@ngrx/store-devtools/-/store-devtools-4.0.0.tgz#b79c24773217df7fd9735ad21f9cbf2533c96e04"
-  integrity sha1-t5wkdzIX33/Zc1rSH5y/JTPJbgQ=
+"@ngrx/store-devtools@^8.5.1":
+  version "8.5.1"
+  resolved "https://registry.yarnpkg.com/@ngrx/store-devtools/-/store-devtools-8.5.1.tgz#17ad7b605ff85d30d7ffbee9bf43f928583cf010"
+  integrity sha512-Eml2tV1GkGA7ctnCH7DGKSaQEKtqbFPdnGjgyVyZilKC1oSonsw6U5+vfG3t11CgGSTyZQvi+wQLbmNiKuqQ/g==
 
-"@ngrx/store@4.1.0":
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/@ngrx/store/-/store-4.1.0.tgz#8c074cbc6197e259cd9492e85a76c3c67dbea173"
-  integrity sha1-jAdMvGGX4lnNlJLoWnbDxn2+oXM=
+"@ngrx/store@^8.5.1":
+  version "8.5.1"
+  resolved "https://registry.yarnpkg.com/@ngrx/store/-/store-8.5.1.tgz#5141610bfd67675f5bc7d31edd1fc996c330675a"
+  integrity sha512-KIQ9Ooro0tl3+ohTpSXvvVUlo40TTLWAWFx2Ys8pI1Yqr39O9da3PNWecLA/2q4YmFf1bO072lYmcBTp1+Shvg==
 
 "@ngtools/webpack@8.3.19":
   version "8.3.19"
