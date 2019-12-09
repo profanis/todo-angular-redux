@@ -2,11 +2,43 @@
   TODOs
 </h1>
 
-<p>Insert new item</p>
-<input type="text" [(ngModel)]="todoItem" name="todoItem"> <button type="button" (click)="save()">Add</button>
 
-<ul>
-  <li *ngFor="let todo of todos">
-    {{todo.name}} <button type="button" (click)="delete(todo.id)">x</button>
-  </li>
-</ul>
+<div class="row mb-5">
+  <div class="col-2">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Insert new item</label>
+        <input type="text" class="form-control" [(ngModel)]="todoItem" name="todoItem">
+      </div>
+      <button type="button" class="btn btn-primary"  (click)="save()">Add</button>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-4">
+    <div class="card" [formGroup]="form">
+      <h5 class="card-header">Form Items</h5>
+      <div class="card-body">
+        <ul>
+          <li *ngFor="let todo of todoItems.controls" [formGroup]="todo">
+            <input type="text" formControlName="name" (blur)="update(todo)">
+            <button type="button" (click)="delete(todo)">x</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-1"></div>
+  <div class="col-4">
+    <div class="card">
+      <h5 class="card-header">List Items</h5>
+      <div class="card-body">
+        <ul>
+          <li *ngFor="let todo of todos">
+            {{todo.name}}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
