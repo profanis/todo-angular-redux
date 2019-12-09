@@ -48,11 +48,9 @@ export class AppComponent implements OnInit {
   }
 
   delete(todoItem: FormControl): void {
-    this.store.dispatch(new store.RemoveTodo(todoItem.value.id));
   }
 
-  update(todoItem) {
-    this.store.dispatch(new store.UpdateTodo(todoItem.value));
+  update(todoItem: FormControl): void {
   }
 
   private buildForm() {
