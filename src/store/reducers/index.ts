@@ -9,8 +9,6 @@ export const reducers: ActionReducerMap<ProductState> = {
  todos: fromTodos.reducer
 };
 
-export const getProductState = createFeatureSelector<ProductState>('products');
+export const getTodoState = createFeatureSelector<ProductState>('todos');
 
-export const getTodoState = createSelector(getProductState, (state: ProductState) => state.todos);
-
-export const getAllTodos = createSelector(getTodoState, (state: fromTodos.TodoState) => state.data);
+export const getAllTodos = createSelector(getTodoState, (state: ProductState) => state.todos.data);

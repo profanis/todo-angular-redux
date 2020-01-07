@@ -12,7 +12,7 @@ import { EffectsModule } from '@ngrx/effects';
   imports: [
     CommonModule,
     FormsModule,
-    StoreModule.forFeature('products', fromTodos.reducers),
+    StoreModule.forFeature('todos', fromTodos.reducers),
     EffectsModule.forFeature(fromTodos.effects)],
   providers: [TodoService],
   declarations: [TodoComponent],

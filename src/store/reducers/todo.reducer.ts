@@ -12,21 +12,21 @@ export const initialState: TodoState = {
 export function reducer(state = initialState,
   action: fromTodos.TodoActions): TodoState {
    switch (action.type) {
-     case '[TODOs] Load TODOs Success': {
+     case fromTodos.LOAD_TODOS_SUCCESS: {
       const data = [...state.data, ...action.payload];
       return {
         data
       };
     }
 
-    case '[TODOs] Save TODO': {
+    case fromTodos.SAVE_TODO: {
       const data = [...state.data, action.payload];
       return {
         data
       };
     }
 
-    case '[TODOs] Delete TODO': {
+    case fromTodos.DELETE_TODO: {
       const data = state.data.filter(it => it.id !== action.payload);
       return {
         data
